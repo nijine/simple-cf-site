@@ -34,5 +34,5 @@ variable "price_class" {
 variable "www_dir" {
   description = "The local location of your website content."
   type = string
-  default = "../www"
+  default = "/dev/null"
 }
