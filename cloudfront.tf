@@ -3,7 +3,7 @@ data "aws_cloudfront_cache_policy" "managed-cacheopt" {
 }
 
 resource "aws_cloudfront_origin_access_control" "oac" {
-  name                              = "default"
+  name                              = local.domain_name
   description                       = "default policy"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
