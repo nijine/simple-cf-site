@@ -1,5 +1,7 @@
 # simple-cf-site
-A basic terraform module that stands up an AWS Cloudfront-based website backed by S3.
+A basic terraform module that stands up an AWS Cloudfront-based website backed by S3. All resources created with this module are compatible with AWS Free Tier pricing\*.
+
+\* - Actual costs will vary based on site traffic, file storage needs, etc.
 
 ## Inputs
 ### Required:
@@ -14,7 +16,7 @@ A basic terraform module that stands up an AWS Cloudfront-based website backed b
 
 **price_class** - The price class for your CloudFront distribution. Ultimately defines with regions are served by the CDN. Options include: `PriceClass_All`, `PriceClass_200`, `PriceClass_100`. Default: `PriceClass_All`
 
-**www_dir*** - The local file path to your website content. Creates S3 objects for each file present in this directory. Based on the [dir](https://registry.terraform.io/modules/hashicorp/dir/template/latest) module.
+**www_dir** - The local file path to your website content. Creates S3 objects for each file present in this directory. Based on the [dir](https://registry.terraform.io/modules/hashicorp/dir/template/latest) module.
 
 ## Example Usage
 
