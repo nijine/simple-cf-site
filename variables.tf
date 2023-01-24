@@ -36,3 +36,11 @@ variable "www_dir" {
   type        = string
   default     = "/dev/null"
 }
+
+variable "default_cache_func_assoc" {
+  type = list(object({
+    event_type   = string
+    function_arn = string
+  }))
+  default = []
+}

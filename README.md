@@ -18,6 +18,8 @@ A basic terraform module that stands up an AWS Cloudfront-based website backed b
 
 **www_dir** - The local file path to your website content. Creates S3 objects for each file present in this directory. Based on the [dir](https://registry.terraform.io/modules/hashicorp/dir/template/latest) module.
 
+**default_cache_func_assoc** - A list of maps containing a function association, in case you need to assign functions to your CDN origin requests.
+
 ## Example Usage
 
 ``` main.tf
@@ -43,3 +45,5 @@ module "site" {
   www_dir      = "../www"
 }
 ```
+
+Another example can be found in my `myblog` repository, under `infra`.
