@@ -47,6 +47,14 @@ resource "aws_cloudfront_distribution" "s3_website" {
 
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
+
+    dynamic "function_association" {
+      for_each = local.cache_func
+      content {
+        event_type   = function_association.value["event_type"]
+        function_arn = function_association.value["function_arn"]
+      }
+    }
   }
 
   price_class = local.price_class

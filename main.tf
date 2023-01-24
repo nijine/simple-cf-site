@@ -9,5 +9,6 @@ locals {
   error_object = var.error_object
   price_class  = var.price_class
   www_dir      = var.www_dir
+  cache_func   = var.default_cache_func_assoc
 }
 
