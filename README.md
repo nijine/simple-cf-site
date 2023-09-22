@@ -14,7 +14,7 @@ A basic terraform module that stands up an AWS Cloudfront-based website backed b
 
 **error_object** - The error object to serve when visiting a page or document that doesn't exist. Default: `error.html`
 
-**price_class** - The price class for your CloudFront distribution. Ultimately defines with regions are served by the CDN. Options include: `PriceClass_All`, `PriceClass_200`, `PriceClass_100`. Default: `PriceClass_All`
+**price_class** - The price class for your CloudFront distribution. Ultimately defines which regions are served by the CDN. Options include: `PriceClass_All`, `PriceClass_200`, `PriceClass_100`. Default: `PriceClass_All`
 
 **www_dir** - The local file path to your website content. Creates S3 objects for each file present in this directory. Based on the [dir](https://registry.terraform.io/modules/hashicorp/dir/template/latest) module.
 
